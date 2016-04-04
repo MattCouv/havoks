@@ -1,0 +1,75 @@
+'use strict';
+
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var less = require('gulp-less');
+var autoprefixer = require('gulp-autoprefixer');
+var path = require('path');
+var cleanCss = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+
+//Const
+const reload = browserSync.reload;
+
+// Less
+gulp.task('less', function() {
+  const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+  return gulp.src('./less/main.less')
+    .pipe(less().on('error', function(err) {
+      console.log(err);
+    }))
+    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+    .pipe(cleanCss())
+    .pipe(gulp.dest('./dist/styles'))
+    .pipe(browserSync.stream());
+});
+
+// JS
+gulp.task('js',function() {
+  return gulp.src('js/**/*.js')
+      .pipe(concat())
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist/js'));
+});
+
+// js dev
+gulp.task('js:dev',function() {
+  return gulp.src('js/**/*.js')
+      .pipe(concat())
+      .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('watch', function() {
+  gulp.watch(['less/*.less', 'less/*/*.less'], ['less']);
+  gulp.watch(['js/*.js'], ['js:dev'], reload);
+  gulp.watch('*.html', reload);
+});
+
+// Static server
+gulp.task('serve', ['less','js','watch'], function() {
+  browserSync.init({
+    server: {
+      baseDir: './',
+      notify: false
+    }
+  });
+});
+
+// build dev
+gulp.task('dev',function() {});
+
+// build dist
+gulp.task('dist',function() {});
+
+gulp.task('default', ['serve']);
