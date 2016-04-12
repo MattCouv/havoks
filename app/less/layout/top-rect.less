@@ -1,24 +1,29 @@
 .top_rect {
-  width: 100%;
-  padding-top: 450px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+
+  width: 100%;
+  padding-top: 450px;
+
   background-color: @blue-dark;
   overflow: hidden;
 
   &:after {
     content: "";
-    display: block;
-    background: @black-Rangitoto;
-    height: 400px;
-    width: 8000px;
     position: absolute;
     z-index: 1;
     bottom: -50%;
     left: 50%;
+
+    height: 400px;
+    width: 8000px;
     margin-left: -4000px;
+
+    display: block;
+    background: @grey-light;
+
     transform: rotate(6deg);
   }
 }

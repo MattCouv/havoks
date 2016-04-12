@@ -80,7 +80,7 @@ gulp.task('serve', ['scripts:dev', 'styles','images'], () => {
     }
   });
 
-  gulp.watch(['app/**/*.html'], reload);
+  gulp.watch(['*.html'], reload);
   gulp.watch(['app/less/**/*.less'], ['styles']);
   gulp.watch(['app/scripts/**/*.js'], ['js-watch']);
   gulp.watch(['app/images/**/*'], reload);

@@ -24,7 +24,7 @@
     </section>
     <section class="team">
       <h1>Equipo</h1>
-      <ul>
+      <ul class="team__list">
         <li><a href="#">w4t3r</a></li>
         <li><a href="#">MEXGriiM</a></li>
         <li><a href="#">Payason</a></li>
@@ -33,6 +33,28 @@
         <li><a href="#">n3to</a></li>
       </ul>
     </section>
+    <section class="contact">
+      <h1>Mandanos un saludo</h1>
+      <p>Si gustas dejar un comentario</p>
+      <form class="contact__form" action="https://formspree.io/matth.couvreur@gmail.com"
+      method="POST">
+      <div class="contact__form__group">
+          <label><span>Nombre</span>
+          <input type="text" name="name"></label>
+          <label><span>Email</span>
+          <input type="email" name="_replyto"></label>
+      </div>
+          <label><span>Mensaje</span>
+          <textarea name="mensaje"></textarea></label>
+          <input type="submit" value="Send">
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="footer__social">
+        <span class="icon"></span>
+        <span class="icon"></span>
+      </div>
+    </footer>
     <script src="dist/scripts/main.min.js" charset="utf-8"></script>
   </body>
 </html>
