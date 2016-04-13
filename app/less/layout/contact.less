@@ -5,31 +5,70 @@
 }
 
 .contact__form {
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 10px;
+  max-width: 500px;
+  margin: 30px auto 0;
+  padding: 20px;
   background-color: @white;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 
   label {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px;
 
     span {
       display: block;
+      margin-bottom: 5px;
+      color: @blue-marine;
+      text-transform: uppercase;
+      font-weight: bold;
     }
+  }
 
-    input, textarea {
-      border: solid 2px @yellow-gold;
+  input, textarea {
+    width: 100%;
+    border: solid 2px @blue-marine;
+    border-radius: 4px;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: @yellow-gold;
     }
+  }
+
+  textarea {
+    resize: vertical;;
+  }
+
+  input[type='submit'] {
+    background-color: @blue-marine;
+    color: @white;
   }
 }
 
 .contact__form__group {
 
   label {
-    width: 48%;
-    margin-right: 2%;
+    width: 100%;
     float: left;
+
+    &:nth-child(1) {
+      padding-right: 0;
+    }
+
+    &:nth-child(2) {
+      padding-left: 0;
+    }
+
+    @media (min-width:440px) {
+      width: 50%;
+      &:nth-child(1) {
+        padding-right: 5px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 5px
+      }
+    }
   }
 }

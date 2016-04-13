@@ -83,7 +83,7 @@ gulp.task('serve', ['scripts:dev', 'styles','images'], () => {
   gulp.watch(['*.html'], reload);
   gulp.watch(['app/less/**/*.less'], ['styles']);
   gulp.watch(['app/scripts/**/*.js'], ['js-watch']);
-  gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['app/images/**/*'], ['images', reload]);
 });
 
 // Build production files, the default task

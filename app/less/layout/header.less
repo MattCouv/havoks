@@ -5,7 +5,12 @@
 
 .header__menu--svg {
   position: absolute;
-  top: 28px;
+  top: 20px;
   left: 30px;
+  display: block;
   cursor: pointer;
+
+  @media @nav-query {
+    display: none;
+  }
 }

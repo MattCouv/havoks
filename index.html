@@ -7,23 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="sponsors">
-
+    <div class="nav">
+      <div class="nav__container">
+        <a href="#" class="toggle-nav"></a>
+        <ul class="nav__menu">
+          <li><a href="#">Havoks</a></li>
+          <li><a href="#">El equipo</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <ul class="nav__social social">
+          <li><a href="https://www.facebook.com/HavoksGaming" class="icon social__facebook" target="_blank"></a></li>
+          <li><a href="https://twitter.com/HavoksGaming" class="icon social__twitter" target="_blank"></a></li>
+          <!-- <li><a href="https://twitter.com/HavoksGaming" class="icon social__twitter" target="_blank"></a></li> -->
+        </ul>
+      </div>
     </div>
     <div class="top_rect"></div>
     <header class="header">
-      <svg class="header__menu--svg" fill="#fff" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-      </svg>
+      <a href="#" class="toggle-nav">
+        <svg class="header__menu--svg" fill="#fff" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </a>
     </header>
     <section class="hero">
-      <h1>¡Bienvenidos!</h1>
+      <!-- <a class="hero__next" href=""></a> -->
+    </section>
+    <section class="havoks">
+      <h1>¡Somos Havoks!</h1>
       <p>Somos Havoks Gaming, actualmente participamos en la Copa Latinoamérica de League of Legends, somos un nuevo equipo profesional el cual ha tenido un excelente desempeño en el primer semestre, siendo la "Sorpresa" de muchos otros equipos.</p>
-      <a href=""></a>
     </section>
     <section class="team">
-      <h1>Equipo</h1>
+      <h1>El equipo</h1>
       <ul class="team__list">
         <li><a href="#">w4t3r</a></li>
         <li><a href="#">MEXGriiM</a></li>
@@ -34,8 +50,8 @@
       </ul>
     </section>
     <section class="contact">
-      <h1>Mandanos un saludo</h1>
-      <p>Si gustas dejar un comentario</p>
+      <h1>Mándanos un Saludo.</h1>
+      <p>Si gustas puedes dejar un comentario.</p>
       <form class="contact__form" action="https://formspree.io/matth.couvreur@gmail.com"
       method="POST">
       <div class="contact__form__group">
@@ -46,15 +62,16 @@
       </div>
           <label><span>Mensaje</span>
           <textarea name="mensaje"></textarea></label>
-          <input type="submit" value="Send">
+          <input type="submit" value="ENVIAR">
       </form>
     </section>
     <footer class="footer">
-      <div class="footer__social">
-        <span class="icon"></span>
-        <span class="icon"></span>
-      </div>
+      <ul class="footer__social social">
+        <li class="icon social__facebook"></li>
+        <li class="icon social__twitter"></li>
+      </ul>
+      <p class="copyright">© Havoks Gaming 2016</p>
     </footer>
-    <script src="dist/scripts/main.min.js" charset="utf-8"></script>
+    <script src="/dist/scripts/main.min.js" charset="utf-8"></script>
   </body>
 </html>
