@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/MattCouv/onePage/issues"
   },
-  "homepage": "https://github.com/MattCouv/onePage#readme"
+  "homepage": "https://github.com/MattCouv/onePage#readme",
+  "dependencies": {
+    "smoothscroll": "^0.2.2"
+  }
 }

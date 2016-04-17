@@ -11,13 +11,14 @@
       <div class="nav__container">
         <a href="#" class="toggle-nav"></a>
         <ul class="nav__menu">
-          <li><a href="#">Havoks</a></li>
-          <li><a href="#">El equipo</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a data-scroll href="#havoks">Havoks</a></li>
+          <li><a data-scroll  href="#team">El equipo</a></li>
+          <li><a data-scroll href="#contact">Contacto</a></li>
         </ul>
         <ul class="nav__social social">
           <li><a href="https://www.facebook.com/HavoksGaming" class="icon social__facebook" target="_blank"></a></li>
           <li><a href="https://twitter.com/HavoksGaming" class="icon social__twitter" target="_blank"></a></li>
+          <li><a href="hhttp://steamcommunity.com/groups/havoksgaming" class="icon social__steam" target="_blank"></a></li>
           <!-- <li><a href="https://twitter.com/HavoksGaming" class="icon social__twitter" target="_blank"></a></li> -->
         </ul>
       </div>
@@ -34,25 +35,94 @@
     <section class="hero">
       <!-- <a class="hero__next" href=""></a> -->
     </section>
-    <section class="havoks">
+    <section class="havoks" id="havoks">
       <h1>¡Somos Havoks!</h1>
-      <p>Somos Havoks Gaming, actualmente participamos en la Copa Latinoamérica de League of Legends, somos un nuevo equipo profesional el cual ha tenido un excelente desempeño en el primer semestre, siendo la "Sorpresa" de muchos otros equipos.</p>
+      <p>Somos Havoks Gaming, antes conocidos como Coyotes CSGO, nace en Noviembre del 2015 con la idea original de AlAtaque de crear un equipo competitivo de CSGO conformado por Mexicanos.</p>
     </section>
-    <section class="team">
+    <section class="team" id="team">
       <h1>El equipo</h1>
       <ul class="team__list">
-        <li><a href="#">w4t3r</a></li>
-        <li><a href="#">MEXGriiM</a></li>
-        <li><a href="#">Payason</a></li>
-        <li><a href="#">Alataque</a></li>
-        <li><a href="#">Sora</a></li>
-        <li><a href="#">n3to</a></li>
+        <li><a data-scroll href="#w4t3r">w4t3r</a></li>
+        <li><a data-scroll href="#MEXGriiM">MEXGriiM</a></li>
+        <li><a data-scroll href="#BremeL">BremeL</a></li>
+        <li><a data-scroll href="#Alataque">Alataque</a></li>
+        <li><a data-scroll href="#N3to">N3to</a></li>
       </ul>
     </section>
-    <section class="contact">
+    <section id="w4t3r" class="player">
+      <h1>w4t3r</h1>
+      <div class="player__avatar"></div>
+      <div class="player__card card right">
+        <ul>
+          <li><span>role</span>Support</li>
+          <li><span>arma favorita</span>M4A1-S</li>
+          <li><span>mapa favorito</span>Mirage</li>
+          <li><span>edad</span>28</li>
+          <li><span>nombre</span>Daniel Zermeño</li>
+          <li><span>pais</span>México</li>
+        </ul>
+      </div>
+    </section>
+    <section id="MEXGriiM" class="player">
+      <h1>MEXGriiM</h1>
+      <div class="player__avatar"></div>
+      <div class="player__card card left">
+        <ul>
+          <li><span>role</span>Support</li>
+          <li><span>arma favorita</span>AK47</li>
+          <li><span>mapa favorito</span>Overpass</li>
+          <li><span>edad</span>28</li>
+          <li><span>nombre</span>Sergio Gallardo</li>
+          <li><span>pais</span>México</li>
+        </ul>
+      </div>
+    </section>
+    <section id="BremeL" class="player">
+      <h1>BremeL</h1>
+      <div class="player__avatar"></div>
+      <div class="player__card card right">
+        <ul>
+          <li><span>role</span>Entry Fragger</li>
+          <li><span>arma favorita</span>AK47</li>
+          <li><span>mapa favorito</span>Cache</li>
+          <li><span>edad</span>18</li>
+          <li><span>nombre</span>Undefined</li>
+          <li><span>pais</span>México</li>
+        </ul>
+      </div>
+    </section>
+    <section id="Alataque" class="player">
+      <h1>Alataque</h1>
+      <div class="player__avatar"></div>
+      <div class="player__card card left">
+        <ul>
+          <li><span>role</span>In Game Leader</li>
+          <li><span>arma favorita</span>AK47</li>
+          <li><span>mapa favorito</span>Inferno</li>
+          <li><span>edad</span>18</li>
+          <li><span>nombre</span>Alonso Ontiveros</li>
+          <li><span>pais</span>México</li>
+        </ul>
+      </div>
+    </section>
+    <section id="N3to" class="player">
+      <h1>N3to</h1>
+      <div class="player__avatar"></div>
+      <div class="player__card card right">
+        <ul>
+          <li><span>role</span>Support</li>
+          <li><span>arma favorita</span>M4A1-S</li>
+          <li><span>mapa favorito</span>Overpass</li>
+          <li><span>edad</span>23</li>
+          <li><span>nombre</span>Ernesto Moraila</li>
+          <li><span>pais</span>México</li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact" id="contact">
       <h1>Mándanos un Saludo.</h1>
       <p>Si gustas puedes dejar un comentario.</p>
-      <form class="contact__form" action="https://formspree.io/matth.couvreur@gmail.com"
+      <form class="contact__form card" action="https://formspree.io/matth.couvreur@gmail.com"
       method="POST">
       <div class="contact__form__group">
           <label><span>Nombre</span>
@@ -67,8 +137,9 @@
     </section>
     <footer class="footer">
       <ul class="footer__social social">
-        <li class="icon social__facebook"></li>
-        <li class="icon social__twitter"></li>
+        <li><a href="https://www.facebook.com/HavoksGaming" class="icon social__facebook" target="_blank"></a></li>
+        <li><a href="https://twitter.com/HavoksGaming" class="icon social__twitter" target="_blank"></a></li>
+        <li><a href="hhttp://steamcommunity.com/groups/havoksgaming" class="icon social__steam" target="_blank"></a></li>
       </ul>
       <p class="copyright">© Havoks Gaming 2016</p>
     </footer>

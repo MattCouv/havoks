@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(event) {
+
   var toggle = document.querySelectorAll('.toggle-nav');
   var menu = document.querySelector('.nav');
-  console.log(toggle);
   [].forEach.call(toggle,function(elem) {
     elem.addEventListener('click', function(e) {
       e.preventDefault();

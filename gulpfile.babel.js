@@ -48,6 +48,7 @@ gulp.task('styles', () => {
 // JAVASCRIPT FOR PROD
 gulp.task('scripts', () =>
     gulp.src([
+      './node_modules/smoothscroll/smoothscroll.min.js',
       './app/scripts/main.js'
     ])
       // .pipe($.babel())
@@ -59,6 +60,7 @@ gulp.task('scripts', () =>
 // JAVASCRIPT FOR DEV
 gulp.task('scripts:dev', () =>
     gulp.src([
+      './node_modules/smoothscroll/smoothscroll.min.js',
       './app/scripts/main.js'
     ])
       // .pipe($.babel())
@@ -69,7 +71,7 @@ gulp.task('scripts:dev', () =>
 gulp.task('js-watch',['scripts:dev'],reload);
 
 // build:prod
-gulp.task('build:prod',['scripts:dev', 'styles', 'images']);
+gulp.task('build:prod',['scripts', 'styles', 'images']);
 
 // Watch files for changes & reload
 gulp.task('serve', ['scripts:dev', 'styles','images'], () => {

@@ -1,11 +1,16 @@
 .team__list {
+  padding: 0;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 
   & a {
     text-decoration: none;
+  }
+
+  @media @nav-query {
+    flex-flow: row;
   }
 }
