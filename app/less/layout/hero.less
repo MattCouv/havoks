@@ -1,15 +1,17 @@
 .hero {
   position: relative;
-  height: 300px;
+  height: 100px;
+  max-width: 95%;
+  margin: 0 auto;
 
   color: #DCA417;
-  background: url("/dist/images/hero.png") center;
+  background: url("/dist/images/hero.png") center no-repeat;
 
   text-align: center;
 
-  // @media (max-width: 850px) {
-  //   max-width: 90%;
-  // }
+  @media @nav-query {
+    height: 300px;
+  }
 }
 
 .hero__next {
